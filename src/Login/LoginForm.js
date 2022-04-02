@@ -11,11 +11,11 @@ const LoginForm = () => {
     fetch("https://dogsapi.origamid.dev/json/jwt-auth/v1/token", {
       method: "POST",
       headers: {
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ username, password }),
     })
-      .thee((response) => {
+      .then((response) => {
         console.log(response);
         return response.json();
       })
@@ -27,7 +27,7 @@ const LoginForm = () => {
   return (
     <section>
       <h1>Login</h1>
-      <form action="text" onSubmit={handleSubmit}>
+      <form action="" onSubmit={handleSubmit}>
         <input
           type="text"
           value={username}
